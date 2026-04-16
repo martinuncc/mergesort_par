@@ -1,0 +1,2 @@
+10000000 elements: 1.08631 seconds.
+10000000 elements: 1086314 microseconds.

@@ -1,0 +1,2 @@
+1000 elements: 5.2622e-05 seconds.
+1000 elements: 52 microseconds.

@@ -1,0 +1,2 @@
+10000000 elements and 2 threads: 1.25036 seconds.
+10000000 elements and 2 threads: 1250356 microseconds.

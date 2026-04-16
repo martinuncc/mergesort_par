@@ -1,0 +1,2 @@
+2000 elements and 4 threads: 0.000382656 seconds.
+2000 elements and 4 threads: 382 microseconds.

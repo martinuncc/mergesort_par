@@ -1,0 +1,2 @@
+500 elements and 2 threads: 0.00034694 seconds.
+500 elements and 2 threads: 346 microseconds.
