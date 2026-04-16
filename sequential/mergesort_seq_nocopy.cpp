@@ -8,6 +8,7 @@
 #include <algorithm>
 #include <chrono>
 #include <vector>
+#include <fstream>
 
 #define DEBUG 0
 
@@ -86,6 +87,12 @@ int main (int argc, char* argv[]) {
     std::cerr<<"Usage: "<<argv[0]<<" <n>"<<std::endl;
     return -1;
   }
+  std::string filename = "log " + std::string(argv[1]) + "<n> "  + ".txt";
+    std::ofstream logFile(filename);
+    if (!logFile.is_open()) {
+        std::cerr << "Failed to open log file." << std::endl;
+        return -1;
+    }
   
   // command line parameter
   size_t n = atol(argv[1]);
@@ -116,6 +123,9 @@ int main (int argc, char* argv[]) {
   std::cerr<<elapsed_seconds.count()<<std::endl;
   std::cout<<"Simulation took "<<elapsed_seconds.count()<<" seconds."<<std::endl;
   std::cout<<"Simulation took "<<duration.count()<<" microseconds."<<std::endl;
+  logFile << n << " elements: " << elapsed_seconds.count() <<" seconds." << std::endl;
+  logFile << n << " elements: " << duration.count() <<" microseconds." << std::endl;
+  logFile.close();
   checkMergeSortResult (arr, n);
 
 #if DEBUG
